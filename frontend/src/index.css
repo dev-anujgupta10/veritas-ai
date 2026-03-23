@@ -145,9 +145,12 @@ button:active {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+  .mobile-hide {
+    display: none !important;
+  }
   .sidebar-container {
     position: absolute !important;
-    height: 100vh;
+    height: 100dvh !important;
     z-index: 50;
     box-shadow: 10px 0 25px rgba(0,0,0,0.5);
   }
@@ -160,6 +163,7 @@ button:active {
   }
   .search-wrapper {
     padding: 10px !important;
+    padding-bottom: 15px !important;
   }
   .settings-modal-content {
     flex-direction: column !important;

@@ -151,12 +151,12 @@ const MainChat = ({ user, onLogout, token, theme, setTheme }) => {
   };
 
   return (
-    <div style={{ display: 'flex', height: '100vh', overflow: 'hidden', position: 'relative' }}>
+    <div style={{ display: 'flex', height: '100dvh', overflow: 'hidden', position: 'relative' }}>
       
       {/* Universal Fixed Top-Left Layout (Visible Only When Sidebar is Closed) */}
       {!isSidebarOpen && (
-        <div style={{ position: 'absolute', top: '15px', left: '20px', zIndex: 100, display: 'flex', alignItems: 'center', gap: '16px' }}>
-           <h2 className="text-gradient" style={{ margin: 0, fontSize: '20px', fontFamily: 'var(--font-main)' }}>Veritas</h2>
+        <div style={{ position: 'absolute', top: '15px', left: '15px', zIndex: 100, display: 'flex', alignItems: 'center', gap: '10px' }}>
+           <h2 className="text-gradient mobile-hide" style={{ margin: 0, fontSize: '20px', fontFamily: 'var(--font-main)' }}>Veritas</h2>
            <div style={{ 
               display: 'flex', alignItems: 'center', background: 'var(--bg-secondary)', 
               borderRadius: '99px', padding: '4px', border: '1px solid var(--border-color)',
@@ -171,6 +171,7 @@ const MainChat = ({ user, onLogout, token, theme, setTheme }) => {
              </button>
              <button 
                onClick={createNewChat} 
+               className="mobile-hide"
                style={{ padding: '6px 10px', background: 'transparent', color: 'var(--text-primary)', borderRadius: '99px', display: 'flex' }}
                title="New Chat"
              >
