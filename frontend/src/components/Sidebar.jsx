@@ -39,7 +39,7 @@ const Sidebar = ({ isOpen, setIsOpen, chats, currentChatId, onSelectChat, onNewC
   };
 
   return (
-    <div style={{
+    <div className="sidebar-container" style={{
       width: isOpen ? '280px' : '0px',
       transition: 'width 0.3s ease',
       background: 'var(--bg-secondary)',

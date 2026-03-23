@@ -142,3 +142,33 @@ button:active {
   color: var(--accent-blue);
   text-decoration-color: var(--accent-blue);
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .sidebar-container {
+    position: absolute !important;
+    height: 100vh;
+    z-index: 50;
+    box-shadow: 10px 0 25px rgba(0,0,0,0.5);
+  }
+  .chat-header h1 {
+    font-size: 20px !important;
+  }
+  .chat-body {
+    padding: 10px !important;
+    padding-bottom: 110px !important;
+  }
+  .search-wrapper {
+    padding: 10px !important;
+  }
+  .settings-modal-content {
+    flex-direction: column !important;
+    height: 90vh !important;
+    overflow-y: auto !important;
+  }
+  .settings-sidebar {
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 1px solid var(--border-color);
+  }
+}

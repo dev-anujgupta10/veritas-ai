@@ -10,7 +10,7 @@ const MainChat = ({ user, onLogout, token, theme, setTheme }) => {
   const [chats, setChats] = useState([]);
   const [currentChatId, setCurrentChatId] = useState(null);
   const [messages, setMessages] = useState([]);
-  const [isSidebarOpen, setSidebarOpen] = useState(true);
+  const [isSidebarOpen, setSidebarOpen] = useState(window.innerWidth > 768);
   const [isSettingsOpen, setSettingsOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef(null);
@@ -194,7 +194,7 @@ const MainChat = ({ user, onLogout, token, theme, setTheme }) => {
       />
       
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative', transition: 'margin 0.3s' }}>
-        <header style={{ padding: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', marginTop: '10px' }}>
+        <header className="chat-header" style={{ padding: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', marginTop: '10px' }}>
           <div style={{ textAlign: 'center' }}>
             <h1 className="text-gradient" style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '24px' }}>
               <Sparkles size={24} color="var(--accent-pink)" /> Veritas AI
@@ -203,7 +203,7 @@ const MainChat = ({ user, onLogout, token, theme, setTheme }) => {
           </div>
         </header>
 
-        <div style={{ flex: 1, overflowY: 'auto', padding: '20px', paddingBottom: '120px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div className="chat-body" style={{ flex: 1, overflowY: 'auto', padding: '20px', paddingBottom: '120px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           {messages.length === 0 ? (
              <div style={{ margin: 'auto', textAlign: 'center', color: 'var(--text-secondary)', maxWidth: '400px' }}>
                <Sparkles size={48} color="var(--accent-blue)" style={{ opacity: 0.5, marginBottom: '20px' }} />
@@ -221,7 +221,7 @@ const MainChat = ({ user, onLogout, token, theme, setTheme }) => {
           )}
         </div>
 
-        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '20px', display: 'flex', justifyContent: 'center', background: 'linear-gradient(transparent, var(--bg-color) 80%)' }}>
+        <div className="search-wrapper" style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '20px', display: 'flex', justifyContent: 'center', background: 'linear-gradient(transparent, var(--bg-color) 80%)' }}>
           <div style={{ width: '100%', maxWidth: '800px' }}>
              <SearchBox onSend={handleVerify} disabled={loading} />
           </div>
