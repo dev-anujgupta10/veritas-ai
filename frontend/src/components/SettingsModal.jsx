@@ -57,7 +57,7 @@ const SettingsModal = ({ onClose, theme, setTheme, user, onLogout, onDeleteAllCh
 
   return (
     <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.5)', zIndex: 50, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <div className="glass-panel" style={{ width: '100%', maxWidth: '600px', display: 'flex', flexDirection: 'row', height: '400px', overflow: 'hidden' }}>
+      <div style={{ background: 'var(--bg-secondary)', borderRadius: '16px', boxShadow: 'var(--shadow-lg)', width: '100%', maxWidth: '600px', display: 'flex', flexDirection: 'row', height: '400px', overflow: 'hidden' }}>
         
         <div style={{ width: '200px', background: 'var(--bg-secondary)', borderRight: '1px solid var(--border-color)' }}>
           <div style={{ padding: '20px', fontSize: '18px', fontWeight: '600', borderBottom: '1px solid var(--border-color)' }}>Settings</div>

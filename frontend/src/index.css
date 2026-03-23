@@ -66,6 +66,12 @@ input, textarea, button {
   border: none;
 }
 
+/* Hide Microsoft Edge and generic browser native password eye icons */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
 button {
   cursor: pointer;
   transition: all 0.2s ease;
