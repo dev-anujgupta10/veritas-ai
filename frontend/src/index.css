@@ -40,12 +40,18 @@
   box-sizing: border-box;
 }
 
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: var(--font-main);
   background-color: var(--bg-color);
   color: var(--text-primary);
-  min-height: 100vh;
-  overflow-x: hidden;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -150,7 +156,7 @@ button:active {
   }
   .sidebar-container {
     position: absolute !important;
-    height: 100dvh !important;
+    height: 100% !important;
     z-index: 50;
     box-shadow: 10px 0 25px rgba(0,0,0,0.5);
   }

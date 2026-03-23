@@ -151,7 +151,7 @@ const MainChat = ({ user, onLogout, token, theme, setTheme }) => {
   };
 
   return (
-    <div style={{ display: 'flex', height: '100dvh', overflow: 'hidden', position: 'relative' }}>
+    <div style={{ display: 'flex', height: '100%', width: '100%', overflow: 'hidden', position: 'absolute', top: 0, bottom: 0, left: 0, right: 0 }}>
       
       {/* Universal Fixed Top-Left Layout (Visible Only When Sidebar is Closed) */}
       {!isSidebarOpen && (
